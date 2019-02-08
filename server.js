@@ -8,8 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get('/', (req, res)=>{
+	console.log("Someone connected")
   res.sendFile(path.join(__dirname, "public/index.html"));
 })
+
 
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
